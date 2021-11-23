@@ -198,9 +198,6 @@ class Connection(ConnectionBase):
     def __init__(self, play_context, new_stdin, *args, **kwargs):
         super(Connection, self).__init__(play_context, new_stdin, *args, **kwargs)
 
-        if os.geteuid() != 0:
-            raise AnsibleError('machinectl connection requires running as root')
-
         self.machinectl = MachineCtl(kwargs.get('machinectl_command'))
         self.remote_uid = None
         self.remote_gid = None
