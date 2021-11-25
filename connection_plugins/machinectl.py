@@ -222,7 +222,7 @@ class Connection(ConnectionBase):
                 pass
 
             if returncode == 0:
-                return self._parse_passwd(stdout)
+                return self._parse_passwd(stdout.decode())
 
         try:
             if passwd_path is None:
