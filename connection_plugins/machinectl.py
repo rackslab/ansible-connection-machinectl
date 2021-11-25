@@ -217,7 +217,7 @@ class Connection(ConnectionBase):
 
         for getent in ['/bin/getent', '/usr/bin/getent']:
             try:
-                returncode, stdout, stderr = self._run_command('shell', args=[getent, 'passwd', user])
+                returncode, stdout, stderr = self._run_command('shell', args=[getent, 'passwd', user], machine=self.machine)
             except AnsibleError:
                 pass
 
