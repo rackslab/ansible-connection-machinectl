@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.0.1] - 2023-07-20
+
 ### Added
 
 - Docker build assets and [dobi](https://github.com/dnephin/dobi) build
@@ -30,3 +32,6 @@
   output of `machinectl show <container>`.
 - Properly extract hostvars for named host when running dynamic inventory with
   the `--host` flag.
+
+[unreleased]: https://github.com/rackslab/ansible-connection-machinectl/compare/v0.0.1...HEAD
+[0.0.1]: https://github.com/rackslab/ansible-connection-machinectl/releases/tag/v0.0.1
