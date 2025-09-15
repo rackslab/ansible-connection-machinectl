@@ -573,9 +573,12 @@ class Connection(ConnectionBase):
 
         # Okay, this is definitely not a great idea to do, that's pretty ugly,
         # but we have no choice... Let me explain
-        # You cannot "copy-to --force" with machinectl. There is a request to
-        # do that, but unaddressed as of today:
-        #   https://github.com/systemd/systemd/issues/9441
+        # You cannot "copy-to --force" with machinectl because machine DBus
+        # policy misses the corresponding method declaration
+        # (CopyToMachineWithFlags). It has been fixed upstream but it is not
+        # available yet in distributions:
+        # https://github.com/systemd/systemd/commit/02927af799dbca2ca22a652dc9acc692326dbc3f
+        #
         # So you cannot overwrite an existing file. This is very annoying when
         # pushing DIRECTORIES... as the same ansible file (with the same name
         # on the remote target) must be overwritten for each file in the
