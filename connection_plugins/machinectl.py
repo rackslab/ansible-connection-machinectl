@@ -80,8 +80,11 @@ class MachineCtl(object):
         Copy the current environment, merging keyword arguments and setting
         the systemd log level.
         '''
-
-        return dict(merge_hash(os.environ, kwargs), SYSTEMD_LOG_LEVEL=cls.SYSTEMD_LOG_LEVEL)
+        # Add TERM=dump to disable OSC control sequences which mess commands
+        # standard output captures.
+        return dict(merge_hash(os.environ, kwargs),
+                    SYSTEMD_LOG_LEVEL=cls.SYSTEMD_LOG_LEVEL,
+                    TERM='dumb')
 
     def _version(self):
         ''' Queries the installed version of machinectl/systemd '''
