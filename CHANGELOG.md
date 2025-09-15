@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [0.0.2] - 2025-09-15
+
+### Fixed
+- Set `TERM=dumb` in `machinectl` environment to avoid commands standard output
+  being messed up with OSC control sequences.
+
 ## [0.0.1] - 2023-07-20
 
 ### Added
@@ -35,3 +41,4 @@
 
 [unreleased]: https://github.com/rackslab/ansible-connection-machinectl/compare/v0.0.1...HEAD
 [0.0.1]: https://github.com/rackslab/ansible-connection-machinectl/releases/tag/v0.0.1
+[0.0.2]: https://github.com/rackslab/ansible-connection-machinectl/releases/tag/v0.0.2
