@@ -2,6 +2,13 @@
 
 ## [Unreleased]
 
+### Changed
+- Use `shutil.which()` from Python standard library instead of
+  `distutils.spawn.find_executable()`
+
+### Removed
+- Dependency on `distutils.spawn` module.
+
 ## [0.0.2] - 2025-09-15
 
 ### Fixed
