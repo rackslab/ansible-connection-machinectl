@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.0.3] - 2025-09-17
+
 ### Changed
 - Use `shutil.which()` from Python standard library instead of
   `distutils.spawn.find_executable()`
@@ -49,3 +51,4 @@
 [unreleased]: https://github.com/rackslab/ansible-connection-machinectl/compare/v0.0.1...HEAD
 [0.0.1]: https://github.com/rackslab/ansible-connection-machinectl/releases/tag/v0.0.1
 [0.0.2]: https://github.com/rackslab/ansible-connection-machinectl/releases/tag/v0.0.2
+[0.0.3]: https://github.com/rackslab/ansible-connection-machinectl/releases/tag/v0.0.3
